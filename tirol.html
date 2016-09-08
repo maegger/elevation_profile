@@ -13,10 +13,10 @@ var options = {
 var map = new OpenLayers.Map("maparea");
 var wms = new OpenLayers.Layer.WMS("TIRIS Orthofoto", "https://gis.tirol.gv.at/arcgis/services/Service_Public/oph05_wms/MapServer/WMSServer",
             {format: 'image/png', 
-             bbox: '-30000,150000,220000,300000',
+             bbox: '-25000,150000,200000,290000',
              layers: 'Image'},
             {projection: new OpenLayers.Projection("EPSG:31254"),
-            maxExtent: new OpenLayers.Bounds(-30000,150000,220000,300000)}
+            maxExtent: new OpenLayers.Bounds(-25000,150000,200000,290000)}
             );
 
 map.addLayer(wms);
