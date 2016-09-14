@@ -2,7 +2,9 @@ import arcpy, sys
 
 shp = sys.argv[1]
 
-print "Test"
+lyr = arcpy.mapping.Layer(shp)
+result = arcpy.GetCount_management(lyr)
+count = int(result.getOutput(0))
 print shp
-print "Test"
+print("Anzahl von Geometrien im Shapefile: " + str(count))
 print "Bitte schwarzes Fenster schliessen"
